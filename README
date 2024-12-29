@@ -1,0 +1,22 @@
+An overview of the application.
+-----------------------Order Management System---------------------
+    Fontend:-
+        1-I Have created Userfriendly interface. User can Place an order with specific details of product(like product name,Quantity,Price)
+        2-OnOrdering the product ,
+            Order Response: will show the orderId,productName,quantity,price,discount,finalAmount,timestamp.
+        3-User can view all the orders placed by him/her. By using orderid.It show same as what Order Response shows.
+        4-Total Revenue:
+            This component shows the total transactions/ total amount that as transaction done.
+            This component will update the total amount automatically , when addition of placing orders. So that it is easy to find the total revenue of products buying product.
+        
+    Backend:-
+        1- I have created server.js
+            which accepts productName, quantity, price on placing order .Each order should have a unique ID and timestamp.
+        2- Dynamic Logic:
+            -If the total order amount (quantity × price) exceeds ₹10,000, apply a 10% discount.
+            -If the order includes more than 5 items, apply an additional ₹500 flat discount.
+            -The discounts reflect in the stored order data and the Order Summary API response.
+        3-No negative quantities or prices are allowed
+        4-Used an in-memory database (e.g., an array) for storing order data.
+        5-Used Javascript/ Typescript along with Express.js
+        6-The APIs are functional and testable using tools like Postman or cURL.
